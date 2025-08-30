@@ -11,7 +11,7 @@ export async function getLatestProducts() {
     take: LATEST_PRODUCTS_LIMIT,
     orderBy: { createdAt: "desc" },
   });
-  return data.map((product) => ({
+  return data.map((product: any) => ({
     ...product,
     price: product.price.toString(),
     rating: product.rating.toString(),
